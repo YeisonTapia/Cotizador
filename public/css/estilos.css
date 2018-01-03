@@ -1,0 +1,326 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+body {
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif
+}
+
+/* //////////// estilos Hipertexto ///////////////// JS */
+
+/* cotizador */
+
+div.cabecera{
+  max-height: 120px;
+  background: url('../imgs/cabecera.jpg') fixed top center ;
+  height: auto;
+}
+h2.title-cabecera{
+  margin: 0;
+  color: #0071BC;
+  font-weight: 900;
+  font-size: 5rem;
+}
+
+section#buscador {
+    margin: 30px 0 10px;
+    position: relative;
+}
+
+section#buscador button {
+    background: transparent;
+    border: none;
+    outline: 0;
+
+}
+
+section#buscador input.form-control {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #bbb;
+    outline: 0;
+    -webkit-box-sizing: none;
+    -moz-box-sizing: none;
+    box-sizing: none;
+}
+
+div#info-cot h3 {
+  color: #0071BC;
+    text-align: center;
+    margin: 15px 0 20px;
+    font-weight: 600;
+}
+
+/* /////// barra-info */
+.barra-info{background: #eee; box-sizing: border-box;padding: 15px;   color: #0071BC;}
+
+.barra-info p {
+    margin: 0;
+}
+
+.ordernar i {
+    color: #0071BC;
+}
+
+/* libros-cotz */
+span#numero-libros{
+  font-size: 1.75rem;
+}
+/* total */
+.total {
+    font-size: 1.75rem;
+}
+
+
+/* ver-cot */
+
+.ver-cot a{
+    text-decoration: none;
+}
+
+.ver-cot i {
+    font-size: 1.6rem;
+}
+.ver-cot {
+   color: #0071BC;
+    text-align: center;
+}
+
+.ver-cot  p{
+    font-size: 0.7rem;
+}
+
+
+/*//// fila-libro  ///// */
+
+#fila-libro{
+  margin: 10px 0;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+#fila-libro:hover  {
+ border: 1px solid #00C4BC;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+
+/* portada libro */
+
+.portada img {
+    max-width: 200px;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin: 20px auto;
+}
+
+/* info libro */
+h4.tit-libro{
+  margin: 20px 0 35px;
+  color:#0071BC;
+  font-weight: 600;
+  -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1
+
+}
+
+#fila-libro:hover h4.tit-libro, #fila-libro:hover .precio{
+  color:#00C4BC ;
+  -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1
+}
+
+
+/* precio */
+.precio {
+  display:  block;
+  padding-top: 20px;
+    color: #0071BC;
+    text-align: center;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1
+}
+
+p.precio-libro {
+    font-size: 2.5rem;
+    margin: -5px 0 -30px 0;
+}
+
+a#agregar-libro {
+  color: #fff;
+  font-weight: 600;
+    background: #0071BC;/* 00C4BC */
+    padding: 10px 25px;
+    margin: 10px auto;
+    display: block;
+    max-width: 200px;
+    border-radius: 10px;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    text-decoration: none;
+}
+#fila-libro:hover a#agregar-libro {
+  color: #fff;
+  font-weight: 600;
+    background: #00C4BC;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+/* fin estilos Hipertexto JS */
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #0071BC;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+color: #fff;
+  text-indent: 10px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a  {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: .85rem;
+
+}
+
+.sidebar-nav li i  {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.sidebar-nav li a:hover, .sidebar-nav i a:hover  {
+  text-decoration: none;
+  color: #00C4BC;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #fff;
+  font-weight: 600;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media(min-width:768px) {
+  #wrapper {
+    padding-left: 0;
+  }
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+  #sidebar-wrapper {
+    width: 0;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }  
+}
+
+@media(max-width:767px) {
+
+.precio {display: inline-flex;}
+}
+
+.loader{
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 2000;
+  background-image: url(http://www.londontown.com/references/directory/images/big-ajax-loader.gif);
+  background-repeat: no-repeat;
+  content: " ";
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
